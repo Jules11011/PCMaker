@@ -1,10 +1,28 @@
 ﻿@page
 @model WebApplication_PCMaker.Pages.accountSignInModel
 @{
-	ViewData["Title"] = "Sign In";
+	ViewData["Title"] = "Sign Up";
 }
 
-<div>
-	<h1>Sign Up form</h1>
-	
+<div class="d-flex justify-content-center align-items-center vh-100">
+	<div class="border p-4 rounded bg-white shadow" style="min-width: 300px; max-width: 400px; width: 100%;">
+		<h2>Sign Up</h2>
+
+		<form method="post">
+			<div class="mb-3">
+				<label asp-for="newAccount.Name" class="form-label"> Username</label>
+				<input asp-for="newAccount.Name" class="form-control" placeholder="Enter useranme"/>
+			</div>
+			<div class="mb-3">
+				<label asp-for="newAccount.Email" class="form-label">Email</label>
+				<input asp-for="newAccount.Email" class="form-control" type="email" placeholder="Enter Email"/>
+			</div>
+			<div class="mb-3">
+				<label asp-for="newAccount.Password" class="form-label">Password</label>
+				<input asp-for="newAccount.Password" class="form-control" type="password" placeholder="Enter Password"/>
+			</div>
+			<button type="submit" class="btn btn-primary w-100">Confirm</button>
+		</form>
+
+	</div>
 </div>

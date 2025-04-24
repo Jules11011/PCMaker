@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using PCMaker___Logic_layer;
 
 namespace WebApplication_PCMaker.Pages
 {
@@ -8,5 +9,8 @@ namespace WebApplication_PCMaker.Pages
         public void OnGet()
         {
         }
+
+        [BindProperty]
+        public Account newAccount { get; set; }
     }
 }
